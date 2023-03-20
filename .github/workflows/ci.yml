@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, "!main", "!tst"]
+  pull_request:
+    branches: [main, tst, dev]
+
+jobs:
+  run-pylint:
+    runs-on: ubuntu-latest
+    name: pylint
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Analysing the code with pylint
+      run: |
+        pylint --rcfile pyproject.toml $(git ls-files '*.py')
+
+  run-isort:
+    runs-on: ubuntu-latest
+    name: isort
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+    - uses: isort/isort-action@master
+      with:
+          requirementsFiles: "requirements.txt"
+
+  run-black:
+    runs-on: ubuntu-latest
+    name: black
+    steps:
+    - uses: actions/checkout@v3    
+    - uses: psf/black@stable
+      with:
+        options: "--check --verbose"

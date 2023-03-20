@@ -1,5 +1,5 @@
-import math
 import random
+import math
 
 
 def main(var_a, b, c, d):
