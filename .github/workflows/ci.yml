@@ -2,11 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [dev, "!main", "!tst"]
   pull_request:
-    branches: [main]
-  pull_request_target:
-    branches: [tst, dev]
+    branches: [main, tst, dev]
     
 jobs:
   run-pylint:
