@@ -4,11 +4,10 @@ on:
   push:
     branches: [dev, "!main", "!tst"]
   pull_request:
-    branches: [main, tst, dev]
-    types: [open, reopened, closed]
-    paths:
-      - '**.py'
-
+    branches: [main]
+  pull_request_target:
+    branches: [tst, dev]
+    
 jobs:
   run-pylint:
     runs-on: ubuntu-latest
