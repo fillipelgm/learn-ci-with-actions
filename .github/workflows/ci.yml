@@ -5,7 +5,7 @@ on:
     branches: [dev, "!main", "!tst"]
   pull_request:
     branches: [main, tst, dev]
-      types: [open, reopened, closed]
+    types: [open, reopened, closed]
     paths:
       - '**.py'
 
