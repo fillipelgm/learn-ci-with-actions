@@ -13,6 +13,7 @@ def get_yesterday_as_str():
 
 def main():
     """Main function (meant to test stuff only)"""
+    print(type(date.today()))
     print(f"today: {get_today_as_str()}")
     print(f"yesterday: {get_yesterday_as_str()}")
 
