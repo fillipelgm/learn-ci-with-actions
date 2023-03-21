@@ -17,7 +17,7 @@ jobs:
       requirements_file_path: requirements.txt
       toml_config_file_path: pyproject.toml
 
-  whatever:
+  whatever2:
     needs: [whatever, code-checks]
     runs-on: ubuntu-latest
     steps:
