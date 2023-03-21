@@ -13,8 +13,8 @@ def get_yesterday_as_str():
 
 def main():
     """Main function (meant to test stuff only)"""
-    print(f'today: {get_today_as_str()}')
-    print(f'yesterday: {get_yesterday_as_str()}')
+    print(f"today: {get_today_as_str()}")
+    print(f"yesterday: {get_yesterday_as_str()}")
 
 
 if __name__ == "__main__":
