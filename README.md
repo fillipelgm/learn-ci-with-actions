@@ -8,12 +8,18 @@
 
 [![CI](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci.yml)
 
+[![Reusable CI Workflow](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci_with_reusable_workflow.yml/badge.svg?branch=main)](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci_with_reusable_workflow.yml)
+
 <h3><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="git branch icon" style="height: 3%; width: 3%;"/> tst branch </h3>
 
 [![CI](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci.yml/badge.svg?branch=tst)](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci.yml)
 
+[![Reusable CI Workflow](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci_with_reusable_workflow.yml/badge.svg?branch=tst)](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci_with_reusable_workflow.yml)
+
 <h3><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="git branch icon" style="height: 3%; width: 3%;"/> dev branch </h3>
 
 [![CI](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci.yml)
+
+[![Reusable CI Workflow](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci_with_reusable_workflow.yml/badge.svg?branch=dev)](https://github.com/fillipelgm/learn-ci-with-actions/actions/workflows/ci_with_reusable_workflow.yml)
 
 ## Overview
