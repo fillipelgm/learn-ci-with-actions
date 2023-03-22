@@ -1,9 +1,7 @@
 name: CI
 
 on:
-  push:
-  pull_request:
-    branches: [main, tst, dev]
+  workflow_dispatch:
     
 jobs:
   run-pylint:

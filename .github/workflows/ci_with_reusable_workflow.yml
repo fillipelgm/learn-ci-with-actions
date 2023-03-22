@@ -1,0 +1,21 @@
+name: Reusable CI Workflow
+
+on:
+  push:
+    branches: [main, tst, dev]
+  pull_request:
+    branches: dev
+    
+jobs:
+  code-checks:
+    uses: fillipelgm/actions-and-workflows/.github/workflows/formatting_linting.yml@main
+    with:
+      requirements_file_path: requirements.txt
+      toml_config_file_path: pyproject.toml
+
+  unit-tests:
+    needs: code-checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run unit tests
+        run: echo Running tests...
