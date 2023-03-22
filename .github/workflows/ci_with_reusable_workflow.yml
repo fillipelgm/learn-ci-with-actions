@@ -9,9 +9,9 @@ on:
 jobs:
   code-checks:
     uses: fillipelgm/actions-and-workflows/.github/workflows/formatting_linting.yml@main
-    with:
-      requirements_file_path: requirements.txt
-      toml_config_file_path: pyproject.toml
+    # with:
+    #   requirements_file_path: requirements.txt
+    #   toml_config_file_path: pyproject.toml
 
   unit-tests:
     needs: code-checks
