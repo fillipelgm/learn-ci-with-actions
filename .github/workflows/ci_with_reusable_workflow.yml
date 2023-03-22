@@ -1,25 +1,18 @@
 name: Reusable CI Workflow
 
 on:
-  push:
+  workflow_dispatch:
     
 jobs:
-  whatever:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run a one-line script
-        run: echo Started promisingly!
-    
   code-checks:
-    needs: whatever
     uses: fillipelgm/actions-and-workflows/.github/workflows/formatting_linting.yml@main
     with:
       requirements_file_path: requirements.txt
       toml_config_file_path: pyproject.toml
 
-  whatever2:
-    needs: [whatever, code-checks]
+  unit-tests:
+    needs: code-checks
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
-        run: echo Success!
+      - name: Run a unit tests
+        run: echo Running tests...
