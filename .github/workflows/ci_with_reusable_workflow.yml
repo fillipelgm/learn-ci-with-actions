@@ -1,4 +1,4 @@
-name: Reusable CI Workflow
+name: CI
 
 on:
   push:
@@ -8,16 +8,17 @@ on:
     
 jobs:
   code-checks:
-    uses: fillipelgm/actions-and-workflows/.github/workflows/formatting_linting.yml@main
+    uses: fillipelgm/reusable-workflows/.github/workflows/formatting_linting.yml@main
     with:
+      python-version: 3.9
       requirements_file_path: requirements.txt
       toml_config_file_path: pyproject.toml
 
-  unit-tests:
-    needs: code-checks
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run unit tests
-        run: echo Running tests...
-      - name: Fail deliberately
-        run: exit 1
+  # unit-tests:
+  #   needs: code-checks
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Run unit tests
+  #       run: echo Running tests...
+  #     - name: Fail deliberately
+  #       run: exit 1
